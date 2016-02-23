@@ -2149,6 +2149,8 @@ public class DragSortListView extends ListView {
             return false;
         }
 
+        if(mDragListener != null) mDragListener.startDrag(position);
+
         View v = mFloatViewManager.onCreateFloatView(position);
 
         if (v == null) {
@@ -2458,6 +2460,7 @@ public class DragSortListView extends ListView {
 
     public interface DragListener {
         public void drag(int from, int to);
+        public void startDrag(int position);
     }
 
     /**

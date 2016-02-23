@@ -424,4 +424,9 @@ public class SimpleDragSortCursorAdapter extends ResourceDragSortCursorAdapter {
         CharSequence convertToString(Cursor cursor);
     }
 
+    @Override
+    public void startDrag(int position)
+    {
+
+    }
 }
